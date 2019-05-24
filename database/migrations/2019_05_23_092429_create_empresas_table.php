@@ -19,6 +19,7 @@ class CreateEmpresasTable extends Migration
             $table->string('email');
             $table->string('endereco');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

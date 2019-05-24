@@ -10,11 +10,9 @@
             </div>
             <div class="card">
                 <div class="card-header">{{ __('Editar Empresa') }}</div>
-
                 <div class="card-body">
                     {{-- <form method="PATCH" action="{{route('empresa.update', $empresa->id)}}"> --}}
                     {{ Form::model($empresa, ['route' => ['empresa.update', $empresa->id], 'method' => 'patch']) }}
-
                         @include('empresa.form')
                     {{Form::close()}}
                 </div>

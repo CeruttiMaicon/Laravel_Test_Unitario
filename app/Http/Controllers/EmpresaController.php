@@ -60,7 +60,6 @@ class EmpresaController extends Controller
     public function edit($id)
     {
         $empresa = Empresa::find($id);
-        
         return view('empresa.edit', compact('empresa'));
     }
 
@@ -73,7 +72,8 @@ class EmpresaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Empresa::find($id)->update($request->all());
+        return redirect()->route('empresa.index');
     }
 
     /**
@@ -83,7 +83,8 @@ class EmpresaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {   
+        Empresa::destroy($id);
+        return redirect()->route('empresa.index');
     }
 }

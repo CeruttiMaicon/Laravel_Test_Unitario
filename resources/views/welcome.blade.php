@@ -81,11 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{ config('app.name', 'Laravel') }}
                 </div>
 
                 <div class="links">
-                    <a href="{{route('empresa.index')}}">Cadastro Empresa</a>
+                    <a href="{{route('empresa.index')}}">Empresas</a>
                 </div>
             </div>
         </div>
