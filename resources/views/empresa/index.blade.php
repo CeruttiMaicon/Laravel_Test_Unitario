@@ -32,9 +32,10 @@
                                         <td>{{$empresa->endereco}}</td>
                                         <td>
                                             <div class="row">
-                                                <a class="btn btn-primary mr-2" href="{{route('empresa.edit', $empresa->id)}}"> Editar</a>    
+                                                <a class="btn btn-sm btn-secondary mr-2" href="{{route('empresa.show', $empresa->id)}}"> Visualizar</a>    
+                                                <a class="btn btn-sm btn-primary mr-2" href="{{route('empresa.edit', $empresa->id)}}"> Editar</a>    
                                                 {{ Form::open(['method' => 'DELETE', 'route' => ['empresa.destroy', $empresa->id]]) }}
-                                                {{ Form::submit('Deletar', ['class' => 'btn btn-danger']) }} 
+                                                {{ Form::submit('Deletar', ['class' => 'btn btn-sm btn-danger']) }} 
                                                 {{ Form::close() }} 
                                             </div>
                                         </td>

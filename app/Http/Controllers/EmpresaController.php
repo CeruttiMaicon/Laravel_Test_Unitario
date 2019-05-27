@@ -48,7 +48,8 @@ class EmpresaController extends Controller
      */
     public function show($id)
     {
-        //
+        $empresa = Empresa::find($id);
+        return view('empresa.show', compact('empresa'));
     }
 
     /**
