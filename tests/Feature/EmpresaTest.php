@@ -12,7 +12,7 @@ class EmpresaTest extends TestCase
 {
 
     //Utilizar este recurso apaga o banco de dados ao final do teste
-    use RefreshDatabase;
+    // use RefreshDatabase;
 
     /** @test */
     public function autenticando_usuario_e_verificando_permissao_de_criar_empresa()
